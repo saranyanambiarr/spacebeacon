@@ -41,9 +41,14 @@ Once all your terraform files are ready, proceed to Step 3.
 
 ✅Step 3:
 
-Run the cmds in order 1. terraform init 2. terraform validate 3. terraform plan 4. terraform apply
+Run the cmds in the workspace infra in order 1. terraform init 2. terraform validate 3. terraform plan 4. terraform apply
 
-Create the Helm chart by running the cmd: helm create chart-name
-A terraform file for helm release has the providers, the chart name and the load balancer hostname that I want as output for viewing my application.
+Run the cmd aws eks update-kubeconfig --name eks-cluster --region ap-south-1 to create/update the kubeconfig.
+
+Navigate to the workspace app. Here, a terraform file for helm release has the providers, the chart name and the load balancer hostname that I want as output for viewing my application.
 
 Run the same Terraform commands in this workspace too and get the LoadBalancer hostname as output.
+
+Paste the hostname in your browser and Voila! See the application running in real time.
+
+Run the cmd terraform destroy in both the workspace to destroy the infrastructure.
