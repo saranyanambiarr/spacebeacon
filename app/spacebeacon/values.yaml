@@ -1,0 +1,7 @@
+appName: flaskapp
+
+namespace: prod
+
+image:
+  name: saranyanambiar/spacex
+  tag: latest
